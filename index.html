@@ -11,12 +11,73 @@
 </head>
 <body>
     <header class="display-4 bg-light text-center">
-        Cadastrar Produtos
+        Cadastro de Produtos
     </header>
 
-    <main class="container">
+    <main class="container mt-4">
         <section>
             <div class="display-5">Formulário de Cadastro</div>
+            
+            <!-- Register Form -->
+            <div class="row mt-3">
+                <div class="col-md-10 offset-md-1">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNome">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <label for="inputDescription" class="col-sm-2 col-form-label">Descrição:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputDescription">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputPrice" class="col-sm-2 col-form-label">Preço:</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="inputPrice">
+                            </div>
+
+                            <label for="selectCategory" class="col-sm-2 col-form-label">Categoria:</label>
+                            <div class="col-sm-4">
+                                <select class="form-select" aria-label="Selecione uma opção" id="selectCategory">
+                                    <option selected>Escolha:</option>
+                                    <option value="1">Nacional</option>
+                                    <option value="2">Importado</option>
+                                    <option value="3">Produção Própria</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputDescription" class="col-sm-2 col-form-label">Opções</label>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkBoxPromotion">
+                                    <label class="form-check-label" for="checkBoxPromotion">
+                                      Promoção
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkBoxRelease">
+                                    <label class="form-check-label" for="checkBoxRelease">
+                                      Lançamento
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
         <hr>
         <section>
