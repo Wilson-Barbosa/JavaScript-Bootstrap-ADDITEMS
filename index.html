@@ -21,12 +21,12 @@
             <!-- Register Form -->
             <div class="row mt-3">
                 <div class="col-md-10 offset-md-1">
-                    <form> 
+                    <form onsubmit="save(); return false;" id="productForm"> 
                         <!-- Name -->
                         <div class="row mb-3">
-                            <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
+                            <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputNome">
+                                <input type="text" class="form-control" id="inputName" required>
                             </div>
                         </div>
                         
@@ -34,7 +34,7 @@
                         <div class="row mb-3">
                             <label for="inputDescription" class="col-sm-2 col-form-label">Descrição:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputDescription">
+                                <input type="text" class="form-control" id="inputDescription" required>
                             </div>
                         </div>
 
@@ -43,13 +43,13 @@
                             <!-- Price -->
                             <label for="inputPrice" class="col-sm-2 col-form-label">Preço:</label>
                             <div class="col-sm-4">
-                                <input type="number" class="form-control" id="inputPrice">
+                                <input type="text" class="form-control" id="inputPrice" required>
                             </div>
                             <!-- Category -->
                             <label for="selectCategory" class="col-sm-2 col-form-label">Categoria:</label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Selecione uma opção" id="selectCategory">
-                                    <option selected>Escolha:</option>
+                                <select required class="form-select" aria-label="Selecione uma opção" id="selectCategory">
+                                    <option value="" selected>Escolha:</option>
                                     <option value="1">Nacional</option>
                                     <option value="2">Importado</option>
                                     <option value="3">Produção Própria</option>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-4">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
                             </div>
                         </div>
                     </form>
@@ -92,46 +92,18 @@
 
             <div class="row mt-3">
                 <div class="col-md-10 offset-md-1">
-                    <table class="table">
+                    <table class="table" id="productsTable">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Descrição</th>
+                            <th scope="col" class="d-none d-md-table-cell">Descrição</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Categoria</th>
-                            <th scope="col">Opções</th>
+                            <th scope="col" class="d-none d-md-table-cell">Opções</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Computador M1-TX</td>
-                            <td>Intel i7, 16GB, SSD 256, HD 1T</td>
-                            <td>4.900,00</td>
-                            <td>Nacional</td>
-                            <td>
-                                <span class="badge bg-success">P</span>
-                                <span class="badge bg-primary">L</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Computador M2-TX</td>
-                            <td>Intel i7, 32GB, SSD 512, HD 1T</td>
-                            <td>5.900,00</td>
-                            <td>Importado</td>
-                            <td><span class="badge bg-primary">L</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Computador M1-T</td>
-                            <td>Intel i5, 8GB, HD 1T</td>
-                            <td>2.900,00</td>
-                            <td>Produção Própria</td>
-                            <td></td>
-                          </tr>
-                        </tbody>
+                        <tbody><!-- The products will be loaded here --></tbody>
                       </table>
                 </div>
             </div>
@@ -144,10 +116,16 @@
         @Sistemas P&D
     </footer>
 
-    <!-- JavaScript -->
-    <script src="./src/index.js"></script>
+
 
     <!-- JavaScript for Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    
+    <script src="./src/JQuery.js"></script>
+    <script src="./src/maskPlugin.js"></script>
+    <script src="./src/index.js"></script>
+
 </body>
 </html>
